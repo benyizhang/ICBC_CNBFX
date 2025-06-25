@@ -3,6 +3,7 @@ name: run main.py
 on:
   schedule:
     - cron: '0 8 * * 1-5' # Every Monday to Friday 8am
+  workflow_dispatch:
 
 jobs:
   build:

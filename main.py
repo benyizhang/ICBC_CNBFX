@@ -78,9 +78,6 @@ else:
     
     Best regards,
     Binyi Zhang.
-    
-    Best regards,
-    Binyi Zhang
     """)
     
     # ========= add Excel 附件 =========

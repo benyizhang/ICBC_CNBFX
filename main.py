@@ -71,11 +71,14 @@ else:
     msg['From'] = EMAIL_ADDRESS
     # Send Email to ICBC RMD department
     msg['To'] = "binyi.zhang@cz.icbc.com.cn, zhijia.guo@cz.icbc.com.cn, " \
-                "shan.he@cz.icbc.com.cn, tomas.houdek@cz.icbc.com.cn"
+                "shan.he@cz.icbc.com.cn, tomas.houdek@cz.icbc.com.cn"
     msg.set_content(f"""
     Dear Colleagues,
     
-    Please find attched Excel for updated FX rate from the ČNB {filename_date}.
+    Attached is the updated CNB exchange rates for {filename_date}.
+    
+    Best regards,
+    Binyi Zhang.
     
     Best regards,
     Binyi Zhang

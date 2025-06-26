@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '0 6 * * 1-5' # Every Monday to Friday 6 UTC time. 
+    - cron: '0 6 * * 1-5' # Every Monday to Friday at 6:00 UTC time. 
   workflow_dispatch:
 
 jobs:

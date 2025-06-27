@@ -2,26 +2,25 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # test, for every 5 miniutes. 
+    - cron: '*/5 * * * *'   # 每5分钟触发一次，调试用，正常用‘0 6 * * 1-5’
   workflow_dispatch:
 
 jobs:
-  build:
+  run-script:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: checkout repo content
-        uses: actions/checkout@v3 # checkout the repository content to github runner
-
-      - name: setup python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11.8' # install the python version needed
-          
-      - name: install python packages
+          python-version: '3.11.8'
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
       - name: Run main.py
         run: python main.py

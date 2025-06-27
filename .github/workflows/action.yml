@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '0 6 * * 1-5' # Every Monday to Friday at 6:00 UTC time. 
+    - cron: '*/5 * * * *' # test, for every 5 miniutes. 
   workflow_dispatch:
 
 jobs:

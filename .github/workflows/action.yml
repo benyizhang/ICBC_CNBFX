@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # 每5分钟触发一次，调试用，正常用‘0 6 * * 1-5’
+    - cron: '0 7 * * *'   # at 7 am UTC time through Monday to Friday
   workflow_dispatch:
 
 jobs:

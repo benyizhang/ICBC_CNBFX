@@ -72,7 +72,8 @@ else:
     msg['Subject'] = f"CNB FX Rates: {filename_date}"
     msg['From'] = EMAIL_ADDRESS
     # Send Email to ICBC RMD department
-    msg['To'] = "binyi.zhangs@gmail.com"
+    msg['To'] = "binyi.zhang@cz.icbc.com.cn, zhida.guo@cz.icbc.com.cz, " \
+                "shan.he@cz.icbc.com.cn, tomas.houdek@cz.icbc.com.cn"
     msg.set_content(f"""
     Dear Colleagues,
     

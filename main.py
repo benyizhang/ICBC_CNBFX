@@ -45,6 +45,8 @@ output_file = "CNB_FX_rates.xls"
 wb.save(output_file)
 print(f"file saved as {output_file}")
 
+# 4. 发送邮件
+
 import smtplib
 from email.message import EmailMessage
 from pathlib import Path
@@ -55,7 +57,7 @@ EMAIL_PASSWORD = "bbpx vaoh ptbm gzjy"
 msg = EmailMessage()
 msg['Subject'] = f"CNB FX Rates: {filename_date}"
 msg['From'] = EMAIL_ADDRESS
-msg['To'] = "binyi.zhang@cz.icbc.com.cn, zhida.guo@cz.icbc.com.cz, " \
+msg['To'] = "binyi.zhang@cz.icbc.com.cn, zhida.guo@cz.icbc.com.cn, " \
             "shan.he@cz.icbc.com.cn, tomas.houdek@cz.icbc.com.cn"
 msg.set_content(f"""
 Dear Colleagues,

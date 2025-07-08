@@ -7,6 +7,8 @@ import holidays
 
 # 设置日期
 today = datetime.date.today()
+print(today)
+
 cz_holidays = holidays.CZ()
 
 # ✅ Step 1: 如果今天是节假日或周末，只打印一句话

@@ -2,7 +2,7 @@ name: Run main.py
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # UTC time 5 am
+    - cron: '0 5 * * *'  # UTC time 5 am 
   workflow_dispatch:        # 允许手动触发
 
 jobs:

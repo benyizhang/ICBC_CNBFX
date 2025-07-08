@@ -5,11 +5,18 @@ from io import StringIO
 from openpyxl import Workbook
 import holidays
 
-# 1. 设定初始日期为昨天
-FX_date = datetime.date.today() - datetime.timedelta(days=1)
-
-# 2. 加载捷克节假日
+# 设置日期
+today = datetime.date.today()
 cz_holidays = holidays.CZ()
+
+# ✅ Step 1: 如果今天是节假日或周末，只打印一句话
+if today.weekday() >= 5 or today in cz_holidays:
+    reason = "weekend" if today.weekday() >= 5 else cz_holidays[today]
+    print(f"Today ({today}) is a non-working day in Czech Republic due to {reason}. No FX rate retrieval.")
+    exit()  # 直接退出程序
+
+# 1. 设定计算时间为T-1
+FX_date = datetime.date.today() - datetime.timedelta(days=1)
 
 # 3. 如果不是工作日，就一直往前推
 while FX_date.weekday() >= 5 or FX_date in cz_holidays:
